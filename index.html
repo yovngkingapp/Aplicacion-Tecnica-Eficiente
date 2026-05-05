@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instrucciones de Posición</title>
+    <title>Instrucción de Posición</title>
     <style>
-        /* Elimina márgenes y asegura que el fondo sea limpio */
         body, html {
             margin: 0;
             padding: 0;
@@ -14,22 +13,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #000; /* Fondo negro para resaltar el GIF */
-            overflow: hidden; /* Evita barras de desplazamiento */
+            background-color: #000;
+            overflow: hidden;
         }
-
-        /* Estilo para que el GIF sea responsivo */
-        img {
+        /* Esto hace que el video se comporte como un GIF visualmente */
+        video {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain; /* Mantiene la proporción original */
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
 
-    <img src="https://i.ibb.co/MDK3TVLH/Realiza-el-video-posicin-inicial-coloca-am.gif" 
-         alt="Instrucción de posición inicial">
+    <!-- 
+        IMPORTANTE: 
+        'autoplay' lo inicia solo.
+        'muted' es obligatorio en Chrome para que el autoplay funcione.
+        'loop' hace que se repita infinitamente.
+        'playsinline' es vital para que funcione en móviles sin abrirse en pantalla completa.
+    -->
+    <video autoplay muted loop playsinline id="miVideo">
+        <source src="https://i.ibb.co/MDK3TVLH/Realiza-el-video-posicin-inicial-coloca-am.gif" type="video/mp4">
+        Tu navegador no soporta este formato.
+    </video>
 
 </body>
 </html>
